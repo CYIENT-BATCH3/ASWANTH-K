@@ -1,0 +1,14 @@
+program that uses 5 keywords in c and print some output using the same
+//here using int,const,float,return,unsigned keywords
+#include <stdio.h>
+int main()
+{
+    unsigned int num;
+    const int value = 3;
+    float avg;
+    printf(" enter a number");
+    scanf("%d",&num);
+    avg= ((float)num+value)/2;
+    printf("\naverage= %f",avg);
+    return 0;
+}
