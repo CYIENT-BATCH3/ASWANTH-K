@@ -1,0 +1,13 @@
+program to input data from user using scanf and display using various formats
+
+
+#include<stdio.h>//including header file
+int main()//main function
+{
+char ch;//declaring a character
+printf("enter a character");
+scanf("%c",&ch);//reading the character using scanf
+printf("\nthe num is %d",ch);//printning the character using %d format specifier
+printf("\nfloat value of num %f",ch);//printing using %f
+printf("\nchar  value of num %c",ch);//printing using %c
+}
