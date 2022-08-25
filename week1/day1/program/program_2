@@ -1,3 +1,6 @@
+program that prints the storage space taken by float and printing it's range of values
+
+
 #include<stdio.h>//including header file
 #include<float.h>//including float.h
 int main()//main file
