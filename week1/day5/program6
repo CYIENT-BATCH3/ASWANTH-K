@@ -1,0 +1,10 @@
+//consider 3 weights and find which is heaviour
+#include <stdio.h>
+
+int main()
+{
+  float w1,w2,w3;//declaring 3 variables for weights
+  printf("enter 3 weights");
+  scanf("%f %f %f",&w1,&w2,&w3);//reading 3 weights
+  w1>w2?(w1>w3?printf("weight 1 is high"):printf("weigth 3 is high")):((w2>w3)?printf("weight 2 is high"):printf("weight 3 is high"));//checking which is greater amoung w1,w2,w3 using conditional operator
+}
