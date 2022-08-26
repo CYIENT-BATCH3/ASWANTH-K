@@ -1,0 +1,10 @@
+//implement basic logic gates using c
+#include <stdio.h>
+
+int main()
+{
+  int num1 = 0,num2 = 0;//declaring variabc
+  (num1&&num2)?printf("\n 1"):printf("\n 0");//performing logical or 
+  (num1||num2)?printf("\n 1"):printf("\n 0");//performing logical AND
+  (!num1)?printf("\n 1"):printf("\n 0");//performing logical NOT
+}
