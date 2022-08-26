@@ -1,0 +1,13 @@
+ write a c program using 4 relational operator
+
+#include <stdio.h>
+int main()
+{
+   int num1,num2;//declaring two integer variables
+   printf("enter 2 numbers");
+   scanf("%d %d",&num1,&num2);//reading two variables
+   num1 == num2 ? printf("num1 is equal to num2") : printf("num1 is not equal to num2");//using conditional operator checking if two numbers are equal or not
+   num1 != num2 ? printf("\n num1 is not equal num2") : printf("\n num1 equal to num2");//using conditional operator checking if two numbers are not equal or equal
+   num1 > num2 ? printf("\nnum1 is greater than  num2") : printf("\nnum1 is not greater than num2");//using conditional operator checking if num1 is greaterthan num2
+   num1 < num2 ? printf("\n num1 is less than  num2") : printf("\n num1 is not less than num2");//using conditional operator checking if num1 is lessthan num2
+}
