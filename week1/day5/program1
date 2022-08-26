@@ -1,0 +1,14 @@
+program for finding the area of a circle
+
+
+#include <stdio.h>
+
+int main()
+{
+    int radius;//declaring integer variable radius
+     float area;//declaring float area
+    printf("enter a radius");
+    scanf("%d",&radius);//reading radius
+    area = 3.14 * radius * radius;//finding area
+    printf("\n area %f",area);//printing area
+}
