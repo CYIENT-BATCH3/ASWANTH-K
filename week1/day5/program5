@@ -1,0 +1,31 @@
+implement 4 types of data using formatted IO & 3 Type of unformatted input
+
+#include <stdio.h>
+
+int main()
+{
+    int a;//declaring integer variable
+    char b;//declaring character variable
+    float c;//declaring float varibale
+    double d;//declaring float variable
+    printf("enter four datas");
+    scanf("%d",&a);//reading using scanf
+    scanf("%c",&b);//reading using scanf
+    scanf("%f",&c);//reading using scanf
+    scanf("%lf",&d);//reading using scanf
+    printf("\na= %d",a);//printing the values
+    printf("\nb=%c",b);//printing the values
+    printf("\nc=%f",c);//printing the values
+    printf("\nd=%lf",d);//printing the values
+    //using unformatted io function
+    char ch;
+    char s;
+    char p[10];
+    ch=getchar();
+    putchar(ch);
+    s=getc();
+    putc(s);
+    p=gets();
+    puts(p);
+       
+}
