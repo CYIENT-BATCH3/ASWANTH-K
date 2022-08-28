@@ -1,0 +1,27 @@
+program to print ASCII value of 10 characters
+
+
+ #include<stdio.h>
+int main()
+{
+char cha='a';//declaring and assigning character variable
+char chb='A';//declaring and assigning character variable
+char chq='b';//declaring and assigning character variable
+char chc='c';//declaring and assigning character variable
+char chd='d';//declaring and assigning character variable
+char che='f';//declaring and assigning character variable
+char chf='g';//declaring and assigning character variable
+char chg='i';//declaring and assigning character variable
+char chj='k';//declaring and assigning character variable
+char  chp='m';//declaring and assigning character variable
+printf("cha = %d",cha);//printing  the ascii value
+printf("chb = %d",chb);//printing  the ascii value
+printf("chq = %d",chq);//printing  the ascii value
+printf("chc = %d",chc);//printing  the ascii value
+printf("chd = %d",chd);//printing  the ascii value
+printf("che = %d",che);//printing  the ascii value
+printf("chf = %d",chf);//printing  the ascii value
+printf("chg = %d",chg);//printing  the ascii value
+printf("chj = %d",chj);//printing  the ascii value
+printf("chp = %d",chp);//printing  the ascii value
+}
