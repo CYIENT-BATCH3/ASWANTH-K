@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+char num;//declaring variable
+char numo;//declaring variable
+char numx;//declaring variable
+printf("enter a decimal value\n");
+scanf("%c",&num);//reading an input
+printf("enter a octal number\n");
+scanf("%c",&numo);//reading an input
+printf("enter a hex number\n");
+scanf("%c",&numx);//reading an input
+printf("\ndecimal number is %d",num);//printning as decimal
+printf("\noctal number is %o",numo);//printning as octal
+printf("\nhexadecimal number is %x",numx);//printning as hexadecimal
+}
