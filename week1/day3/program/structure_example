@@ -1,0 +1,23 @@
+program using structure 
+#include <stdio.h>
+struct employee//defining a strucutre employee with id,name and address
+{
+    int id;
+    char name[20];
+    char address[20];
+};
+int main()
+{ 
+    
+    struct employee e1;//decalring structure variable
+    printf("enter employee deteails");
+    scanf("%d",&e1.id);//reading id
+    scanf("%s",e1.name);//reading name
+    scanf("%s",e1.address);//reading address
+ //printning the inputs by accessing structure
+    printf("\nemployee deteails are");
+    printf("\n employe id%d",e1.id);
+    printf("\n%s",e1.name);
+    printf("\n%s",e1.address);
+    return 0;
+}
