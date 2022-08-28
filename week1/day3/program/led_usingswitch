@@ -60,17 +60,18 @@ int main(void)
 {
     TRISB=0x03;//setting RB0 and RB1 as input
     TRISC=0x00;//setting C as output
+    INTCON2bits.RBPU=0;//desabling pullup
     PORTC=0x00;//initialising port c values as 0
     while(1)
         
     {
-        if(PORTBbits.RB0==1)//checking if RB0 is 1
+        if(PORTBbits.RB0==0)//checking if RB0 is 0
         {
             PORTC=fir;//assigning fir to portc 
             __delay_ms(2000);//setting a delay
             PORTC=sec;//assigning sec to portc
         }    
-        else if(PORTBbits.RB1 == 1)//checking if RB1 is zero
+        else if(PORTBbits.RB1 == 0)//checking if RB1 is zero
         {
             PORTC=thi;//assigning thi to port c
             __delay_ms(2000);//delay
