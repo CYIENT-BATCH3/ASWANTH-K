@@ -1,0 +1,10 @@
+program to input a hexadecimal value using scanf in c
+
+
+#include <stdio.h>
+int main()
+{
+int value;//declaring a integer value
+scanf("%x", &value);//reading the input
+printf("value== %x",value);//printning the value 
+}
