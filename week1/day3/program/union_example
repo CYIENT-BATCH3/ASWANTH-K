@@ -1,0 +1,18 @@
+program using union
+
+#include <stdio.h>
+union phone//declaring union phone
+{
+    char mobile[10];
+    char landline[10];
+};
+int main()
+{     
+    union phone e1;//declaring union variable e1
+    printf("enter phone numbers");
+    scanf("%d",&e1.mobile);//reading input
+    scanf("%s",e1.landline);//reading input
+    printf("\nphone numbers are");
+    printf("\n mobile->%s",e1.mobile);//printing the inputs
+    printf("\nlandline->%s",e1.landline);
+    return 0;
