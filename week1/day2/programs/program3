@@ -1,0 +1,44 @@
+write a program to input 5 integers and 3 character ,4 float values
+1.print all the input values
+2.print the float sum and integer sum of the float values
+3.print the sum of the integer values and devide it by the float sum calculated in question 2
+
+
+
+#include<stdio.h>
+int main()
+{
+int numa,numb,numc,numd,nume;//declaring integer variables
+float f1,f2,f3,f4;//declaring float variables
+char c1,c2,c3;//declaring character variables
+int sum;//declaring variable sum
+int insum;//declaring variable insum
+float fsum;//declaring variable fsum
+float divi;//declaring variable divi
+printf("enter 5 integers");
+scanf("%d",&numa);//reading variable
+scanf("%d",&numb);//reading variable
+scanf("%d",&numc);//reading variable
+scanf("%d",&numd);//reading variable
+scanf("%d",&nume);//reading variable
+printf("enter 4 float numbers");
+scanf("%f",&f1);//reading variable
+scanf("%f",&f2);//reading variable
+scanf("%f",&f3);//reading variable
+scanf("%f",&f4);//reading variable
+printf("enter 3 characters");
+scanf("%c",&c1);//reading variable
+scanf("%c",&c2);//reading variable
+scanf("%c",&c3);//reading variable
+printf("\n %d %d %d %d %d",numa,numb,numc,numd,nume);
+printf("\n %f %f %f %f",f1,f2,f3,f4);
+printf("\n %c %c %c",c1,c2,c3);
+sum=numa+numb+numc+numd+nume;
+fsum=f1+f2+f3+f4;//finding sum
+insum=f1+f2+f3+f4;//finding sum
+printf("\ninteger sum =%d",insum);//printning the sum as integer
+printf("\nfloat sum =%f",fsum);//printning the sum as float
+printf("\nsum of integers value %d",sum);
+divi=(float)sum/fsum;//dividing integr sum ang float sum
+printf("\nint sum/float sum= %f",divi);printning the result 
+}
