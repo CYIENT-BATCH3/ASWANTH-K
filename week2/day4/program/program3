@@ -1,0 +1,45 @@
+based on the plant id print VIN numbers
+
+
+#include <stdio.h>
+int main()
+{
+    int no=109186,n,id;//declaring variables
+   int EC=1,HY=2,PU=3;//initialising variables
+    printf("EC=1 HY=2 PU=3  please enter the plant id");
+    scanf("%d",&id);//reading id from user
+    if(id==EC)//checking if id is equal to EC
+    {
+    printf("enter the number of cars");
+    scanf("%d",&n);//reading no of cars
+   for(int i=0;i<n;i++)
+   {
+       printf("\n1CYLE10PZYE%d",no+i);//printting id's based on number of cars
+       
+   }
+    }
+    
+ else if(id==HY)//checking for HY plant
+    {
+    printf("enter the number of cars");
+    scanf("%d",&n);//reading no of cars
+   for(int i=0;i<n;i++)
+   {
+       printf("\n1CYLE10PZYH%d",no+i);//printting id's based on number of cars
+       
+   }
+    }
+    else if(id==PU)//checking condition for PU plant
+    {
+    printf("enter the number of cars");
+    scanf("%d",&n);//reading no of cars
+   for(int i=0;i<n;i++)
+   {
+       printf("\n1CYLE10PZYP%d",no+i);//printting id's based on number of cars
+       
+   }
+    }
+    
+    else
+    printf("invalid,please enter valid id");//prints if id is not in valid range
+}
