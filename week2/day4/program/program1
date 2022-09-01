@@ -1,0 +1,19 @@
+program to read and print the elements using array
+
+#include <stdio.h>
+int main() {
+    int a[10],i,n;//declaring an integer array of 10 elements
+    printf("enter the number of elements");
+    scanf("%d",&n);//readin n from user
+    printf("enter the elements");
+    for(i = 0;i < n;i++)//for loop for reading the elemets
+    {    
+    scanf("%d", &a[i]);//reading each elements from the user
+    }
+    printf("\narray elements are ");
+    for(i = 0;i < n;i++)//for loop for printing the elemets
+    {
+    printf("\n%d",a[i]);//printing the elements
+    }
+    return 0;
+}
