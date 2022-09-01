@@ -1,0 +1,27 @@
+declare a 2D array and find sum of array elements
+
+#include <stdio.h>
+
+int main()
+{
+    int arr[4][4],i,j,m,n,sum=0;//initialising 2D array
+    printf("enter the elements ");
+    for(int i=0;i<4;i++)
+    {
+    for(int j=0;j<4;j++)
+    {
+        scanf("%d",&arr[i][j]);//reading array elements
+    }
+    }
+    for(int i=0;i<4;i++)
+    {
+    for(int j=0;j<4;j++)
+    {
+       sum=sum+arr[i][j];//finding sum of array elemets
+    }
+    }
+    printf("\nsum = %d",sum);//printing sum
+    
+
+    return 0;
+}
