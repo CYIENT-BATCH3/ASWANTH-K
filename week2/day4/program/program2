@@ -1,0 +1,15 @@
+//program for printing sum of n natural numbers 
+
+#include <stdio.h>
+int main()
+{
+    int n,sum=0;//declaring
+    printf("enter the range");
+    scanf("%d",&n);//readin range n
+    for(int i=0;i<=n;i++)
+    {
+        sum=sum+i;//finding the sum
+    }
+    printf("\nsum === %d",sum);//printning the sum
+    return 0;
+}
