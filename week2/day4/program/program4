@@ -1,0 +1,21 @@
+//basic array programs
+
+#include <stdio.h>
+int main()
+{
+   int b[]={1,2,3,4,5,};//declaring and initialising an array without specifieng tha size  
+   char a[2]={'a','b','c','d'};//declaring and initialising character array 
+   for(int i=0;i<8;i++)
+   {
+       printf("\n char aters are %c",a[i]);
+       
+   }
+   
+   for(int i=0;i<5;i++)
+   {
+       printf("\n char aters are %d",b[i]);
+       
+   }
+   printf("\nb[3]  ==  %d",b[3]);
+   return 0;
+}
