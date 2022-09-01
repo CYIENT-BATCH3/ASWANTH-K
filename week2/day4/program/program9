@@ -1,0 +1,33 @@
+WAP to print sum of diagonal matrix of two dimensional matrix
+
+
+#include <stdio.h>
+
+int main()
+{
+  
+  int a[4][5],m,n,sum=0;//declaring 2D array and variables
+  printf("enter row and coloumn");
+  scanf("%d%d",&m,&n);//reading m and n values
+  printf("\nenter the elements");
+  for(int i=0;i<m;i++)
+  {
+  for(int j=0;j<n;j++)
+  {
+  scanf("%d",&a[i][j]);//reading the elements
+  }
+      
+  }
+  for(int i=0;i<m;i++)
+  {
+  for(int j=0;j<n;j++)
+  {
+      if(i==j)//checking condition for getting diagonal element
+      {
+        sum=sum+a[i][j];//finding sum
+      }
+  }
+  }
+  printf("\nsum == %d",sum);
+    return 0;
+}
