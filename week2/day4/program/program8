@@ -1,0 +1,38 @@
+//read and print the elements of multi dimensional array
+
+#include <stdio.h>
+
+int main()
+{
+  
+  int a[3][3][2],m,n,p;//declaring variables and multidimensional array
+  printf("enter the value for m n p");
+  scanf("%d%d%d",&m,&n,&p);//reading m,n,p
+  printf("\n enter elements");
+  for(int i=0;i<m;i++)
+      {
+      for(int j=0;j<n;j++)
+
+     {
+    for(int k=0;k<p;k++)
+    {
+        scanf("%d",&a[i][j][k]);//reading elements
+    }
+    }      
+    }
+  printf("\nelements are\n");
+   for(int i=0;i<m;i++)
+     {
+      for(int j=0;j<n;j++)
+
+    {
+    for(int k=0;k<p;k++)
+      {
+        printf("%d ",a[i][j][k]);//printing the elements
+      }
+    printf("\n");
+    }      
+    printf("\n");
+    }
+    return 0;
+}
