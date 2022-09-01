@@ -1,0 +1,28 @@
+based on the VIN numbers printing the manufacturing plant
+
+
+
+#include <stdio.h>
+
+int main()
+{
+char a[17];//declaring array
+gets(a);//reading input from user
+if(a[10] == 'E')//checking if the element at 10th index is same as E
+{
+    printf("manufacturing plant is EC");
+    
+}
+else if(a[10] == 'H')//checking if the element at 10th index is same as H
+{
+    printf("manufacturing plant is HY");
+    
+}
+else if(a[10] == 'P')//checking if the element at 10th index is same as p
+{
+    printf("manufacturing plant is PU");
+    
+}
+
+    return 0;
+}
