@@ -1,0 +1,32 @@
+program for finding factorial using recursive function
+
+ALGORITHM
+
+1.start
+2.reading input
+3.calling factorial function
+4.in the factorial function
+  *check if the num is greater than1
+  *finding factorial
+
+#include <stdio.h>
+int fact(int num);//function prototype
+int main()
+{
+    int num,fac;//declaring num
+    printf("enter a number");
+    scanf("%d",&num);//reading input
+    fac=fact(num);//calling the function
+    printf("factorial == %d",fac);//printing the result  
+    return 0;
+}
+int fact(int num)
+{
+    if(num>=1)//checking if the num is greater than or equal to 1
+    {
+        return num*fact(num-1);//calling the function recursively
+    }
+        else
+        return 1;//if the num is less than 1 then it will return 1
+    
+}
