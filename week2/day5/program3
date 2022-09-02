@@ -1,0 +1,29 @@
+//swaping of two variables without using temporary variables
+
+Algorithm
+
+1.start
+2.call the swap function inside the main function
+3.inside swap function
+     * read inputs 
+     * performing swaping without temporary variable
+     * printing the output
+4. stop
+
+#include <stdio.h>
+void swap();//function prototype
+void main()
+{
+swap();//calling swap function
+}
+void swap()
+{
+    int num2,num1;//decalring variables
+    printf("enter the inputs\n");
+    scanf("%d %d",&num1,&num2);//reading the inputs
+    printf("before swaping\n num1=%d num2=%d",num1,num2);
+    num1=num1+num2;//adding num1 and num2 and assigning to num1
+    num2=num1-num2;//substracting num1 and num2 and assigning to num2
+    num1=num1-num2;//substracting num1 and num2 and assigning to num1
+    printf("\nafter swaping \nvalue of num1 =%d value of num2=%d",num1,num2);    //printing the output after the swaping
+}
