@@ -1,0 +1,55 @@
+example of function with no return and no arguments
+
+Algorithm
+
+1. start
+2. call the functions of sum,substraction,multiplication,division in main function
+3.in sum function 
+     * giving inputs  
+     * addition   and printing result
+
+4. in substraction function 
+     * giving inputs  
+     * perform substraction   and printing result
+
+5.in multiplication function 
+     * giving inputs  
+     * perform multiplication and printing result
+5.in division function 
+     * giving inputs  
+     * perform multiplication and printing result
+
+6. STOP
+
+#include <stdio.h>
+void sum()//function for sum
+{
+ int num1=4,num2=3;//declaring variables
+ printf("sum==%d",num1+num2);//finding the sum and printing
+}
+void diff()
+{
+    int num3=22,num4=3;//declaring and initialising the variables
+    printf("\ndifference == %d",num3 - num4);//finding the difference and printing the result
+    
+}
+void mul()
+{
+    int num=10,numa=33;//declaring and initialising variables 
+    printf("\n multiple===%d",num*numa);//finding multiple
+    
+}
+void divi()
+{
+    int num=10,numa=2;//declaring and initialising variables 
+    printf("\n division ===%d",num/numa);//finding devision
+    
+}
+void main()
+{
+    sum();//calling the function
+    diff();//calling the function
+    mul();//calling the function
+    divi();//calling the function
+    
+}
