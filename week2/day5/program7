@@ -1,0 +1,67 @@
+//program for creating a music player using functions
+
+Algorithm
+1.start
+2.in main function read input and call main function
+3. in music function
+   * call play,stop,pause,current,list based on the argument passing 
+4. in the subfunctions performs music player's tasks
+
+
+
+#include <stdio.h>
+void music(int key);//function prototype
+void play();//function prototype
+void stop();//function prototype
+void pause();//function prototype
+void current();//function prototype
+void list();//function prototype
+void main()
+{
+    int key;//decalring variable
+    printf("please enter a key between 1 and 5\n1.play\n2.stop\n3.pause\n4.current\n5.list\n"); 
+    scanf("%d",&key);//reading key
+    music(key);//calling music function
+}
+
+void music(int key)//defining music function
+{
+    switch(key)
+    {
+        case 1:play();//calling play function
+        break;
+         case 2:stop();//calling stop function
+        break;
+         case 3:pause();//calling pause function
+        break;
+         case 4:current();//calling current function
+        break;
+         case 5:list();//calling list function
+        break;
+        default: printf("enter valid key");
+    }
+}
+void play()//defining play function
+{
+    printf("\nit's playing");
+}
+void stop()//defining stop function
+{
+    printf("\n||||stop|||");
+}
+void pause()//defining pause function
+{
+    printf("\n pause");
+}
+void current()//defining current function
+{
+    printf("\n current playing song---------");
+}
+void list()//defining list function
+{
+    printf("\n song listssssssssss");
+}
+
+
+
+
