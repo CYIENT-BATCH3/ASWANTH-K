@@ -20,9 +20,9 @@ PROGRAM
  int factorial();//function prototype
 int main()
 {
-    int fact;
-  fact=factorial();
-  printf("factorial is %d ",fact);
+    int fact;//declaring variable
+  fact=factorial();//calling the factorial function
+  printf("factorial is %d ",fact);//printing the result
     
 }
  int factorial()
@@ -30,10 +30,15 @@ int main()
     int num,fact=1;//declaring variables
     printf("enter a number");
     scanf("%d",&num);//reading num
+    if(num>0)//checking if the num is greater than 0
+    {
     for(int i=1;i<=num;i++)
     {
         fact=fact*i;//finding factorial
         
     }
     return fact;//returning fact to main function
+    }
+    else
+    return 1;//if the value less than 1 then factorial will be 1
 }
