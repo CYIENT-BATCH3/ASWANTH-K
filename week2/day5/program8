@@ -1,0 +1,39 @@
+ program for toggling a perticular bit based on the position given
+ 
+ Algorithm
+ 
+ 1.start
+ 2.reading the input 
+ 3.calling the function for toggling
+ 4.in the toggling function
+  *performing toggling'
+  *print the result in binary form 
+ 
+ PROGRAM
+ **********************
+ 
+ 
+ #include <stdio.h>
+  void fset(int value,int bitpos);//function prototype
+ int main()
+ {
+     int value,bitpos;//declaring variables
+     printf("enter inputs");
+     scanf("%d%d",&value,&bitpos);//reading input
+     fset(value,bitpos);//calling function
+ }
+   void fset(int value,int bitpos)
+   {
+       int num;//declaring variable
+       num=value^(1<<bitpos);//performing toggling in perticular position
+       printf("binary value after toggling\n");
+       for(int i=7;i>=0;i--)
+       {
+           if(num &(1<<i))//checking if the bit is 1 or 0
+           {
+               printf("1");//print if the bit is 1 
+           }
+           else
+           printf("0");
+       }
+   }
