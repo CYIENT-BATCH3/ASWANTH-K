@@ -1,0 +1,39 @@
+//program using  factorial using function with no arguments and with return 
+
+
+Algorithm
+*******************
+1.start
+2.in main function
+   *reading input
+   *calling factorial function
+   *print the factorial based on the value returning from factorail function
+3.in factorial function
+   *finding factorial
+   *returning the result to main function'
+4.stop
+
+PROGRAM
+****************************************
+
+#include <stdio.h>
+ int factorial();//function prototype
+int main()
+{
+    int fact;
+  fact=factorial();
+  printf("factorial is %d ",fact);
+    
+}
+ int factorial()
+{
+    int num,fact=1;//declaring variables
+    printf("enter a number");
+    scanf("%d",&num);//reading num
+    for(int i=1;i<=num;i++)
+    {
+        fact=fact*i;//finding factorial
+        
+    }
+    return fact;//returning fact to main function
+}
