@@ -8,6 +8,8 @@ ALGORITHM
 4.in the factorial function
   *check if the num is greater than1
   *finding factorial
+5.printing the result
+6.stop 
 
 #include <stdio.h>
 int fact(int num);//function prototype
