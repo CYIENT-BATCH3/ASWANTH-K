@@ -1,0 +1,45 @@
+//program using function with arguments and no return type
+
+Algorithm
+
+1.start
+2.in main function
+   *reading inputs 
+   * calling sub function
+3.performing mathematical operations on the subfunctions
+4.stop
+
+
+ #include <stdio.h>
+void sum(float num1,int num2)//function for sum
+{
+ printf("sum==%f",num1+num2);//finding the sum and printing
+}
+void diff(float num1,int num2)
+{
+    printf("\ndifference == %f",num1 - num2);//finding the difference and printing the result
+    
+}
+void mul(float num1,int num2)
+{
+    printf("\n multiple===%f",num1*num2);//finding multiple
+    
+}
+void divi(float num1,int num2)
+{
+    printf("\n division ===%f",num1/num2);//finding devision
+    
+}
+void main()
+{
+    float num1;//declaring float variable
+    int num2;//declaring variables
+    printf("enter two numbers");
+    scanf("%f%d",&num1,&num2);//reading inputs 
+    sum(num1,num2);//calling the function
+    diff(num1,num2);//calling the function
+    mul(num1,num2);//calling the function
+    divi(num1,num2);//calling the function
+}
+
+
