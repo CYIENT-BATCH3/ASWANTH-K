@@ -1,0 +1,59 @@
+//program using function with arguments and with return type
+
+Algorithm
+
+1.start
+2.in main function
+  *reading inputs
+  *calling sub functions
+  *based on the return value from subfunctions prints the output
+
+3. in subfunctions
+   *performing arithmatic operations
+   *returning the resut to main
+4 stop 
+
+
+program
+
+***********************************
+
+ #include <stdio.h>
+float sum(float num1,int num2)//function for sum
+{
+ return (num1+num2);//finding the division and returning to main function
+    
+}
+float diff(float num1,int num2)
+{
+    return (num1-num2);//finding the division and returning to main function
+    
+    
+}
+float mul(float num1,int num2)
+{
+    return (num1*num2);//finding the division and returning to main function
+    
+    
+}
+float divi(float num1,int num2)
+{
+    return (num1/num2);//finding the division and returning to main function
+    
+}
+void main()
+{
+    float num1,sum_result,diff_result,mul_result,divi_result;//declaring float variable
+    int num2;//declaring variables
+    printf("enter two numbers\n");
+    scanf("%f%d",&num1,&num2);//reading inputs 
+   sum_result= sum(num1,num2);//calling the function
+   printf("sum ==%f",sum_result);// printing the sum_result
+    diff_result=diff(num1,num2);//calling the function
+     printf("\ndifference ==%f",diff_result);// printing the sum_result
+    mul_result=mul(num1,num2);//calling the function
+     printf("\nmul ==%f",mul_result);// printing the sum_result
+    divi_result=divi(num1,num2);//calling the function
+    printf("\ndivision ==%f",divi_result);// printing the sum_result
+    
+}
