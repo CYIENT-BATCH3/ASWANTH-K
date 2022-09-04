@@ -1,0 +1,22 @@
+//program for printing even numbers from num to 0 using while
+
+#include<stdio.h>
+ int main()
+ {
+     int num;//declaring num
+     printf("enter anumber\n");
+     scanf("%d",&num);//reading num
+     while(num>=0)//checking i is greater than num
+     {
+         if(num%2==0)//checking if num is even
+         {
+         printf("%d ",num);//printing the num
+         num--;//decrementing i value
+         }
+         else
+         num--;//decrementning num value
+         
+     }
+      
+ }
+
