@@ -1,0 +1,14 @@
+//program for natural numbers from 1 to 100 using while loop
+
+#include<stdio.h>
+ int main()
+ {
+     printf("natural numbers from 1 to 100 are\n\n");
+    int i=1;//declaring variable
+while(i<=100)//loop iterates from 1 to 100
+   {
+  printf("%d  ",i);  
+    i++;//incrementing i
+   }
+      
+ }
