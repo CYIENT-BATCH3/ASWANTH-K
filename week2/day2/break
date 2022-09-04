@@ -1,0 +1,19 @@
+//program using break
+
+#include<stdio.h>
+ int main()
+ {
+     int num=8;//declaring a number
+     for(int i=0;i<5;i++)
+     {
+         if(i==2)
+         {
+             break;//break accourding to the condition
+         }
+         else
+         num=num+i;//adding num and i
+         printf("%d\n",num);//printing num
+         
+     }
+ }
+
