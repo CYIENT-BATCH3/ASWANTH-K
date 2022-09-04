@@ -1,0 +1,23 @@
+//program for checking if the number is palidrome or not
+
+#include<stdio.h>
+ int main()
+ {
+     int num,org,rev=0,digit;//declaring variable
+     printf("enter a number\n");
+     scanf("%d",&num);//reading input 
+     org=num;//assigning the num to org
+     while(num>0)
+     {
+         digit = num % 10;//taking modulas for getting last digit
+         rev = rev * 10 + digit;
+         num=num/10;
+     }
+     if(rev==org)//checking if rev and org are same 
+     {
+         
+         printf("num is palidrome");
+     }
+     else
+     printf("num is not palidrome");
+ }
