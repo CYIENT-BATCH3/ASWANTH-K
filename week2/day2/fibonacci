@@ -1,0 +1,22 @@
+//program to print fibnocci upto num
+
+#include <stdio.h>
+ int main()
+ {
+     int num,fir=0,sec=1,sum=0;//declaring variables
+     printf("enter a number");
+     scanf("%d",&num);//reading num
+     if(num>0)//checking if num is greater than 0
+     {
+     printf("fibnocci  ");
+      while(fir<=num)//condition
+      {
+          printf("%d ",fir);
+        sum=fir+sec;//finding sum of fir    and sec
+        fir=sec;//sec is assigned to fir
+        sec=sum;//sum is assigned to sec
+      }
+     }  
+ 
+    return 0;
+}
