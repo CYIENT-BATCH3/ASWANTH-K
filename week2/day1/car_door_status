@@ -1,0 +1,22 @@
+#include<stdio.h>
+
+   char V_driverside_Doors =0xA5;
+     char V_Passengerside_Doors =0x55;
+     char Tail_Doors = 0xAA ;		//declaring the variables and initialising the values
+    char driver_door_1,driver_door_2,pass_door_1,pass_door_2,tail_door;					//declaring the variables gloabally
+   int main()
+        {
+    driver_door_1 = ( V_driverside_Doors>>7) &(0x01);							//getting 7 th bit using bitwise operators
+    driver_door_2 = ( V_driverside_Doors>>6) &(0x01);							//getting 6 th bit using bitwise operators
+    pass_door_1   = ( V_Passengerside_Doors>>3) &(0x01);						//getting 3 th bit using bitwise operators
+    pass_door_2    = ( V_Passengerside_Doors>>4) &(0x01);						//getting 4th bit
+    tail_door     = ( tail_door >> 0) &(0x01);								//getting 0 th bit
+    //printning the status of the doors using ternary operator
+
+
+    (driver_door_1 ==1)?printf("\ndriver side door 1 is open"): printf("\ndriver side door 1 is closed");	
+    (driver_door_2 ==1)?printf("\ndriver side door 2 is open"): printf("\ndriver side door 2 is closed");
+    (pass_door_1 ==1)?printf("\npassenger side door 1 is open"): printf("\npasseneger side door 1 is closed");	
+    (pass_door_2 ==1)?printf("\npassenger side door 1 is open"): printf("\npassenger side door 1 is closed");
+    (tail_door ==1)?printf("\ntail side door 1 is open"): printf("\ntail side door 1 is closed");		
+        }
