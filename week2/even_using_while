@@ -1,0 +1,21 @@
+//program for printing even numbers upto n using while
+
+#include<stdio.h>
+ int main()
+ {
+     int num,i=0;//declaring num
+     printf("enter anumber\n");
+     scanf("%d",&num);
+     while(i<=num)//checking i is less than num
+     {
+         if(i%2==0)//checking if num is even
+         {
+         printf("%d ",i);//printing the num
+         i++;//incrementing i value
+         }
+         else
+         i++;//incrementing i value
+         
+     }
+      
+ }
