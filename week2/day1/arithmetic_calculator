@@ -1,0 +1,31 @@
+write a program to create an arithmatic calculator using switch statements
+
+#include <stdio.h>
+
+int main() {
+   
+
+float a,b,result;//declaring float variables
+char o;//declaring character variable
+printf("enter the operand first should be higher than second");
+scanf("%f %f",&a,&b);//reading a and b from user
+printf("enter an operator\n");
+scanf(" %c",&o);//reading operator
+switch(o)
+{
+case '+' : printf("sum==%f",a+b);break;//finding sum and printning 
+
+case '-':printf("diff==%f",a-b);break;//finding difference 
+
+case '*':printf("sum==%f",a*b);break;//finding multiplication
+
+case '/':printf("sum==%f",a/b);break;//finding division
+
+default:printf("enter valid operator");break;//default statement
+
+
+}
+    return 0;
+}
+
+
