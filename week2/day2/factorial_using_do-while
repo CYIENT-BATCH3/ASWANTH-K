@@ -1,0 +1,23 @@
+//program for printing factorial using do-while
+
+#include<stdio.h>
+ int main()
+ {
+     
+      int num,fact=1,i=1;//declaring variables
+      printf("enter a number\n");
+      scanf("%d",&num);//reading num
+      if(num>0)//checking if num is greater than 0
+      {
+      do
+       {
+           fact=fact*i;
+           i++;
+       }while(i<=num);//checking condition
+       printf("\nfactorial of the number is  == %d",fact);
+ 
+      }
+      else
+      printf("factorial = 1");
+ }
+
