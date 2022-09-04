@@ -1,0 +1,21 @@
+
+
+#include<stdio.h>
+ int main()
+ {
+     int tem;//declaring temp in inteer
+     printf("enter the temprature   ");
+     scanf("%d",&tem);//reading tem
+     if(tem<0)//cecking if the tem less than 0
+     printf("\nfreezing weather");
+     else if(tem >= 0 && tem <10)
+     printf("\nvery cold weather");
+     else if(tem >= 10 && tem <20)
+     printf("\n cold weather");
+     else if(tem >= 20 && tem <30)
+     printf("\nnormal in temparature");
+     else if(tem >= 30 && tem <40)
+     printf("\nit is hot");
+     else if(tem>=40)
+     printf("\nvery hot");
+ }
