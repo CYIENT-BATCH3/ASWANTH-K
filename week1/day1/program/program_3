@@ -3,11 +3,11 @@ program that uses 5 keywords in c and print some output using the same
 #include <stdio.h>
 int main()
 {
-    unsigned int num;
-    const int value = 3;
-    float avg;
+    unsigned int num;//declaring
+    const int value = 3;//initialising and declaring
+    float avg;//declaring variable
     printf(" enter a number");
-    scanf("%d",&num);
+    scanf("%d",&num);//reading num
     avg= ((float)num+value)/2;
     printf("\naverage= %f",avg);
     return 0;
