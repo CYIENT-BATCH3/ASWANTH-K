@@ -1,0 +1,22 @@
+//wap to conctinate  two strings using inbuilt function
+
+
+1.start
+2.read string1 and string2
+3.print string concatination using inbuilt
+
+#include <stdio.h>
+#include<string.h>//include string.h header file
+int main()
+{
+char str1[56],str2[6];//declare strings
+printf("enter a string1\n");
+scanf("%[^\n]s",str1);//reading string1
+getchar();//reading enter
+printf("enter a string2\n");
+scanf("%[^\n]s",str2);//reading string1
+strcat(str1,str2);//performing strcat
+
+printf("\n string1 after concatination is %s ",str1);
+
+}
