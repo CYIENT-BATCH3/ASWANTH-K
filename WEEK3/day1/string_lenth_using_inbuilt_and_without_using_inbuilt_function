@@ -1,0 +1,25 @@
+//wap to find the length of string using inbuilt function
+
+
+1.start
+2.read string
+3.print string length using inbuilt
+4.print string lengthg without using inbuilt
+
+#include <stdio.h>
+#include<string.h>//include string.h header file
+int main()
+{
+char str[56];//declare string
+printf("enter a string\n");
+scanf("%[^\n]s",str);//reading string
+printf("\nstring length using inbuiltfunction == %d",strlen(str));//printning the result using inbuilt function
+int count=0,i=0;//declare variables
+while(str[i]!='\0')
+{
+    count++;
+ i++;   
+}
+printf("\n string length without inbuilt function is %d ",count);
+
+}
