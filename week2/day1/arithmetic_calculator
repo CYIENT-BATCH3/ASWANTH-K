@@ -1,5 +1,10 @@
 write a program to create an arithmatic calculator using switch statements
 
+
+1.start
+2.read inputs
+3.using switch take perticula oprations and perform operations
+
 #include <stdio.h>
 
 int main() {
