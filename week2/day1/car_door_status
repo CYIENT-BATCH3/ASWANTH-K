@@ -1,3 +1,9 @@
+finding the status of the door
+
+1.start
+2.initialise the door status
+3.based on data exact perticular bit and find the status of the door
+
 #include<stdio.h>
 
    char V_driverside_Doors =0xA5;
