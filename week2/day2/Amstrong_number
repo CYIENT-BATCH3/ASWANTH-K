@@ -1,5 +1,9 @@
 //checking if a number is Armstrong or not
 
+1.start
+2.read number
+3.check amstrong or not
+
 #include <stdio.h>
 
 int main()
