@@ -12,7 +12,7 @@
 int main() {
    
 char str[56];//declaring a string
-//char prev=' ';
+
 int i=0,count=1;//declaring variables
 printf("enter a string");
 scanf("%[^\n]s",str);//reading str
