@@ -1,5 +1,9 @@
 program for printning the status of weather based on temparature 
 
+1.start
+2.read temparature
+3.check the status of temparature
+
 #include<stdio.h>
  int main()
  {
