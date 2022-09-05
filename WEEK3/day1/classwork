@@ -1,0 +1,30 @@
+//wap to enter first name and last name using string and also check output for gets and scanf 
+
+
+Algorithm 
+1.start
+2.read input using scanf
+3.print output using printf
+4.read input using gets
+5.print output using printf
+
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    char f_name[6],l_name[3];//declaring first name string
+   printf("enter first name\n");
+    scanf("%s",f_name);//reading f_name
+    printf("\nfirst name=== %s",f_name);//printning first name
+    printf("\nenter last name");
+    scanf("%s",l_name);//reading lst name
+    printf("\nlast name ===%s",l_name);//printning last name
+  printf("\nenter first name");
+   gets(f_name);//reading first name using gets
+   printf("%s",f_name);//using gets it will overite the characters if the size is small
+    return 0;
+}
