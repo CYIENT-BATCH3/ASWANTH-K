@@ -1,0 +1,45 @@
+/*WAP IN C  to count total number of digit alphabets and special characters*/
+/*
+Algorithm
+
+1.start
+2.read string
+3.check for alphabets and increment alphabets count
+4..check for digits and increment digit count
+5..check for special and  increment special_count
+*/
+
+#include <stdio.h>
+
+int main() {
+    char str[56];//declaring a string
+int i=0,al_count=0,di_count=0,spe_count=0;//declaring variables
+printf("enter a string\n");
+scanf("%[^\n]s",str);//reading str
+while(str[i] !='\0')
+{
+    if((str[i] >= 'a' && str[i]<= 'z' )||(str[i] >= 'A' && str[i] <= 'Z'))//checking if the character is alphabet
+    {
+        
+        al_count++;//incrementing alphabets count
+        
+    }
+    else if(str[i] >= '0' && str[i]<= '9')//checking if the character is  digit
+    {
+        
+        di_count++;//incrementing digit count
+        
+    }
+    else
+    {
+        spe_count++;//incrementing the special character
+    }
+   
+    i++;//incrementing the i value
+}
+
+ printf("\nalphabet count == %d",al_count);
+ printf("\ndigit count == %d",di_count);
+printf("\nspecial characters  count == %d",spe_count);
+    return 0;
+}
