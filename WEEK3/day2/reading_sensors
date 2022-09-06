@@ -1,0 +1,49 @@
+program for reading 2 different sensor inputs and outputs
+1.start
+2.calling appropriate functions and performing reading and printing values
+
+
+#include<stdio.h>
+void temper(int *temp);//function prototype 
+void humi(int *humid);//function prototype
+void wat(int *water);//function prototype
+int main()
+{
+    int temp,humid,water;//declaring variable
+    temper(&temp);//calling temper function using pass by reference method
+    humi(&humid);//calling humid function using pass by reference method
+    wat(&water);//calling wat function using pass by reference method
+    humi(&humid);//calling humid function using pass by reference method
+    temper(&temp);//calling temper function using pass by reference method
+    wat(&water);//calling wat function using pass by reference method
+    wat(&water);//calling wat function using pass by reference method
+    temper(&temp);//calling temper function using pass by reference method
+    humi(&humid);//calling humid function using pass by reference method
+    temper(&temp);//calling temper function using pass by reference method
+    humi(&humid);//calling humid function using pass by reference method
+    wat(&water);//calling wat function using pass by reference method
+    
+}
+void temper(int *temp)//defining temp function
+{
+    
+    printf("\nenter temparature\n");
+  scanf("%d",temp);//reading input
+    printf("\n temparature is %d \n",*temp);//printning the output
+}
+void humi(int *humid)
+{
+    
+    printf("\nenter humidity \n");
+  scanf("%d",humid);//reading input
+    printf("\n humidity is %d \n",*humid);//printting output
+    
+    
+}
+void wat(int *water)
+{
+    
+    printf("\nenter water \n");
+  scanf("%d",water);//reading input
+    printf("\n water level  is %d \n",*water);    
+}
