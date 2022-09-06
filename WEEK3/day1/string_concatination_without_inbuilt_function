@@ -1,0 +1,36 @@
+//program for concatinate string without inbuilt
+
+1.start
+2.read strings
+3.perform concatination
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    char str[32];//declare a string
+    char str2[5];//declare string2
+    printf("enter string\n");
+    scanf("%[^\n]s",str);//read string
+    printf("\nenter a string2\n");
+    getchar();//reading \n
+    scanf("%[^\n]s",str2);
+    int i=0;
+    while(str[i]!='\0')
+    {
+    
+        i++;//increment i
+    }
+    int j=0;//declaring j
+    while(str2[j]!='\0')
+    {
+        str[i]=str2[j];//concatinate string 2 to string1
+        j++;//increment j
+        i++;//increment i
+        
+    }
+    printf("\n string after concatination is  %s",str);
+    return 0;
+}
