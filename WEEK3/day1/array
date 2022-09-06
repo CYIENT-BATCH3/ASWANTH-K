@@ -1,0 +1,37 @@
+//passing array
+
+/*
+1.start
+2.assigning elements to array
+3.calling function
+  *finding sum of two elements
+  *finding sum of all elements
+
+*/
+
+#include <stdio.h>
+void arr_fun(int num1,int num2);//function prototype
+void full_arr(int arr[]);//function prototype
+int main()
+{
+    int arr[]={6,6,6,6,6,6,6};
+    arr_fun(arr[0],arr[2]);              //passing the array elements to function
+    full_arr(arr);                    //passing entire array as elements
+    return 0;
+}
+
+void arr_fun(int num1 ,int num2)               //defining function
+{
+    int sum=0;//declaring varible
+    sum = num1+num2;//finding sum
+    printf("\nsum of 2 numbers of array = %d",sum);
+}
+
+void full_arr(int arr[])                //function to find the entire sum of the elements in array
+{
+    int sum=0;
+    for(int i = 0;i<=6;i++)
+    sum = sum+arr[i];
+    printf("\ntotal sum  of elements is = %d",sum);
+}
+
