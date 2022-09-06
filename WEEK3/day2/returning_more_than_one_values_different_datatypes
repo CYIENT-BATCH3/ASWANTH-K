@@ -1,0 +1,30 @@
+//returning more than one value of different datatypes
+/*
+1.start
+2.read inputs
+3.call the function
+4.returning more than one values of different datatypes
+*/
+#include <stdio.h>
+void result(int *num1,int *num2,char *num3,float *num4);//function prototype
+int main()
+{
+    int num1,num2;
+    char num3;
+    float num4;//declaring variables
+    int *ptr1=&num1;//declaring ptr1
+    int *ptr2=&num2;//decalring ptr2
+    printf("enter two numbers\n");
+    scanf("%d%d",&num1,&num2);//read inputs
+    
+    result(&num1,&num2,&num3,&num4);//calling result function using pass by reference
+    printf("\n num1=%d num2=%d num3=%c num4=%f",num1,num2,num3,num4);//printing result
+    return 0;
+}
+void result(int *num1,int *num2,char *num3,float *num4)//defining function
+{
+    
+ *num3=*num1;
+ 
+ *num4=*num2;
+}
