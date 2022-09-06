@@ -1,0 +1,25 @@
+//program using pointer return type
+
+
+1.start
+2.declare pointer
+3.call function
+4.inside function return location
+5.print results
+
+
+int *get();//function prototype
+int a=10;//declare variable globally
+#include<stdio.h>
+int main()
+{
+    int *p;//declaring pointer
+    p=get();//calling function
+    printf("%p\n",p);//printning address
+    printf("%d",*p);//printing the value
+}
+int *get()//function defining
+{
+    return &a;//return address
+    
+}
