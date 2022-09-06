@@ -7,17 +7,19 @@
 4,findind remainder and quotiant
 4.returning more than one values
 */
+
+
 #include <stdio.h>
 void result(int num1,int num2,int *qu,int *rem);//function prototype
 int main()
 {
-    int num1,num2,a,b;//declaring variables
-    int *qu=&b;//declaring qu pointer
-    int *rem=&a;;//decalring rem pointer
+    int num1,num2;//declaring variables
+    int *qu=&num1;//declaring qu pointer
+    int *rem=&num2;;//decalring rem pointer
     printf("enter two numbers\n");
     scanf("%d%d",&num1,&num2);//read inputs
     result(num1,num2,qu,rem);//calling result function using pass by reference
-    printf("\n num1=%d num2=%d qu=%d rem=%d",num1,num2,b,a);//printing result
+    printf("\nqu=%d rem=%d",num1,num2);//printing result
     return 0;
 }
 void result(int num1,int num2,int *qu,int *rem)//defining function
