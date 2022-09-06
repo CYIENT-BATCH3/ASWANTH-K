@@ -1,0 +1,27 @@
+//wap to return quotiant and remainder passing multiple values
+
+/*
+1.start
+2.read inputs
+3.call the function
+4,findind remainder and quotiant
+4.returning more than one values
+*/
+#include <stdio.h>
+void result(int num1,int num2,int *qu,int *rem);//function prototype
+int main()
+{
+    int num1,num2,a,b;//declaring variables
+    int *qu=&b;//declaring qu pointer
+    int *rem=&a;;//decalring rem pointer
+    printf("enter two numbers\n");
+    scanf("%d%d",&num1,&num2);//read inputs
+    result(num1,num2,qu,rem);//calling result function using pass by reference
+    printf("\n num1=%d num2=%d qu=%d rem=%d",num1,num2,b,a);//printing result
+    return 0;
+}
+void result(int num1,int num2,int *qu,int *rem)//defining function
+{
+ *rem=num1%num2;//finding modulas
+ *qu=num1/num2;//finding quotiant
+}
