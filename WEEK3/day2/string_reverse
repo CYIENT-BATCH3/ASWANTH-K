@@ -1,0 +1,31 @@
+WAP to implement a string reverse function
+
+1.start
+2.read string
+3.perform string reverse
+4.stop
+
+#include<stdio.h>
+#include<string.h>//including string.h header file
+void strrevv(char *str,int len);//function prototype
+int main()
+{
+    char str[30];//declaring string
+    printf("enter a string");
+    scanf("%[^\n]s",str);//reading string
+    printf("\nstring before reversing is %s",str);
+    int len=strlen(str);//finding length  of string
+    strrevv(str,len);//function calling
+    printf("\nstring after reversing %s",str);//printing the string after reversing
+}
+void strrevv(char *str,int len)//function defining
+{
+    char temp;//declaring variable
+    for(int i=0;i<len/2;i++)
+    {
+    temp=str[i];//assigning str[i] to temp
+    str[i]=str[len-i-1];//assigning str[len-i-1] to str[i]
+    str[len-i-1]=temp;//assigning temp to str[len-i-1]
+
+    }
+}
