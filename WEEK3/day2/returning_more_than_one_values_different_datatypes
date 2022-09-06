@@ -24,7 +24,7 @@ int main()
 void result(int *num1,int *num2,char *num3,float *num4)//defining function
 {
     
- *num3=*num1;
+ *num3=*num1;//assigning num1 to num3
  
- *num4=*num2;
+ *num4=*num2;//assigning num2 to num4
 }
