@@ -1,0 +1,34 @@
+//WAP to find smallest and largest element in an array
+
+
+1. start
+2.reading array elements
+3.chcking for largest number
+4.checking for smallest number
+
+#include<stdio.h>
+int main()
+{
+    int arr[5],small,large;//declaring variable
+    printf("enter array elements");
+    for(int i=0;i<5;i++)
+    {
+        
+        scanf("%d",&arr[i]);//reading elements
+    }
+    small=arr[0];//assigning base element to small
+    large=arr[0];//assigning base element to large
+    for(int i=0;i<4;i++)
+    {
+        if(large<arr[i+1])//checking if arr[i+1]th element is larger than large
+        {
+            large=arr[i+1];//assigning arr[i+1] to large
+        }
+         else if(small>arr[i+1])//checking for smallest
+        {
+            small=arr[i+1];//assigning arr[i+1] to small
+        }
+    }
+printf("largest element is %d\n",large);//printning large
+printf("smallest element is %d",small);//printning small
+}
