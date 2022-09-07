@@ -1,0 +1,26 @@
+//WAP To print 10 4 digit random numbers
+
+1.start
+2.finding random numbers
+3.checking if it is 4 digit
+4.printning the numbers
+
+#include<stdio.h>
+#include<stdlib.h>//including stdlib header file
+
+void main()
+{
+    
+    int count=10,num;//declaring variables
+    while(count>0)//checking count greater than 0
+   {
+       
+       num=(rand()%9999);//finding random numbers and assigning to num
+      if(num>1000)//checking if the num is 4 digit
+      {
+          printf("\n%d",num);//printning num
+
+   count--;//decrementing count
+}
+   }
+}
