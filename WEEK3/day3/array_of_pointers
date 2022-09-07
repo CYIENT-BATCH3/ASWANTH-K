@@ -1,0 +1,17 @@
+//program for array of pointers
+1.start
+2.giving input
+3.printning output
+
+#include <stdio.h>
+const int max=4;//declaring max globally
+int main()
+{
+char *name[]={"ASW ","SWAN","NTHK","ASWAAA"};//initialisation of array of pointers 
+int i=0;//declaring variable
+for(i=0;i<max;i++)
+    {
+        printf("value of names[%d]  = %u -- %s\n",i,name[i],name[i]);//printning output
+    }
+    return 0;
+}
