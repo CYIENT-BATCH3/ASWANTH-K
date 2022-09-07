@@ -3,47 +3,51 @@ program for reading 2 different sensor inputs and outputs
 2.calling appropriate functions and performing reading and printing values
 
 
+
 #include<stdio.h>
-void temper(int *temp);//function prototype 
-void humi(int *humid);//function prototype
-void wat(int *water);//function prototype
+void temper(int *tempe);//function prototype 
+void hum(int *humi);//function prototype
+void wat(int *wate);//function prototype
 int main()
 {
     int temp,humid,water;//declaring variable
+    int *tempe=&temp;//declaring pointer
+    int *humi=&humid;//declaring pointer
+    int *wate=&water;//declaring pointer
     temper(&temp);//calling temper function using pass by reference method
-    humi(&humid);//calling humid function using pass by reference method
+    hum(&humid);//calling humid function using pass by reference method
     wat(&water);//calling wat function using pass by reference method
-    humi(&humid);//calling humid function using pass by reference method
+    hum(&humid);//calling humid function using pass by reference method
     temper(&temp);//calling temper function using pass by reference method
     wat(&water);//calling wat function using pass by reference method
     wat(&water);//calling wat function using pass by reference method
     temper(&temp);//calling temper function using pass by reference method
-    humi(&humid);//calling humid function using pass by reference method
+    hum(&humid);//calling humid function using pass by reference method
     temper(&temp);//calling temper function using pass by reference method
-    humi(&humid);//calling humid function using pass by reference method
+    hum(&humid);//calling humid function using pass by reference method
     wat(&water);//calling wat function using pass by reference method
     
 }
-void temper(int *temp)//defining temp function
+void temper(int *tempe)//defining temp function
 {
     
     printf("\nenter temparature\n");
-  scanf("%d",temp);//reading input
-    printf("\n temparature is %d \n",*temp);//printning the output
+  scanf("%d",tempe);//reading input
+    printf("\n temparature is %d \n",*tempe);//printning the output
 }
-void humi(int *humid)
+void hum(int *humi)
 {
     
     printf("\nenter humidity \n");
-  scanf("%d",humid);//reading input
-    printf("\n humidity is %d \n",*humid);//printting output
+  scanf("%d",humi);//reading input
+    printf("\n humidity is %d \n",*humi);//printting output
     
     
 }
-void wat(int *water)
+void wat(int *wate)
 {
     
     printf("\nenter water \n");
-  scanf("%d",water);//reading input
-    printf("\n water level  is %d \n",*water);    
+  scanf("%d",wate);//reading input
+    printf("\n water level  is %d \n",*wate);    
 }
