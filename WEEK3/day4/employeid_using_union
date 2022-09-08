@@ -1,0 +1,27 @@
+//program for creating a union and accessing the union elements
+
+/*1.start
+2.declare a union
+3.read elements by accessing the union
+4.printning the ouput
+*/
+
+
+#include <stdio.h>
+union employe//defining union
+{
+    int no;//declaring integer variable
+    char name[30];//declaring string
+};
+
+int main()
+{
+    union employe e1;//declaring union variable
+    printf("enter employee id & name\n");
+    scanf("%d",&e1.no);//reading no by accessing union 
+    scanf("%s",e1.name);//reading employee name
+    printf("employe id is =%d\n",e1.no);
+    printf("name of the employe is %s",e1.name);//printning employe nme
+
+    return 0;
+}
