@@ -1,0 +1,21 @@
+//program using pragma packing
+1.start
+2.use pragma pack
+3.define structure
+4.printing the result 
+
+#include<stdio.h>
+#pragma pack(1)//using pragma pack 1
+struct numbers//defining structure
+{
+  int num;//defining variable
+  char ch[10];//defining variable
+  float num2;//defining variable
+    
+
+}num1;//declaring structure variable
+
+int main()
+{
+    printf("size is %zu",sizeof(num1));//finding the size after avoiding padding
+}
