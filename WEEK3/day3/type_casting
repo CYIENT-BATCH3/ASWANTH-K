@@ -1,0 +1,12 @@
+program for type casting
+
+#include <stdio.h>
+
+int main() {
+     int a=3,b=2//declaring integer variables;
+    float c;//declaring floating variables
+    c=(float)a+(float)b;//type casting int to float
+    printf("value of c is %f",c);//printnig the output in float
+    
+    return 0;
+}
