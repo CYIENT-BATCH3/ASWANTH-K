@@ -1,0 +1,56 @@
+//WAP to find the direction of car using accelerometer 
+              #include <stdio.h>
+              struct accelerometer //declare a structure 
+              { 
+                 int x,y,z;//declaring integer variable
+              }; 
+              
+              int main()  
+              { 
+                    int i,n; //declaring variables
+                   printf("Enter No.of values to be taken:"); 
+                  scanf("%d",&n); //input no.of values to be taken 
+                  struct accelerometer sensor[n];//declare array of structure variable
+                  int sum_x=0,sum_y=0,sum_z=0; //declare and intialize 3 integer variables by 0 
+                 for(i=1;i<=n;i++) 
+                  // for loop to assign the values to array of struct members 
+                  { 
+                      printf("Enter the values for each member%d\n",i); 
+                      scanf("%d %d %d",&sensor[i].x,&sensor[i].y,&sensor[i].z); //reading values
+                  } 
+                  
+                  for(i=1;i<=n;i++) 
+                  // for loop to find the total sum for x,yand z
+                  { 
+                  sum_x=sum_x+(sensor[i].x); 
+                  sum_y=sum_y+(sensor[i].y); 
+                  sum_z=sum_z+(sensor[i].z); 
+                  } 
+                  sum_x=sum_x/n; //find the average member 1 
+                  sum_y=sum_y/n; //find the average member 2 
+                  sum_z=sum_z/n; //find the average member 3 
+              
+               //finding the direction using else if ladder
+               
+              if(sum_x==100&&sum_y==250&&sum_z==300) 
+              
+                  { 
+                      printf("Left\n"); 
+                  } 
+                  else if(sum_x==300&&sum_y==250&&sum_z==100) 
+                  { 
+                      printf("Right \n"); 
+                  } 
+                  else if(sum_x==100&&sum_y==100&&sum_z==300) 
+                  { 
+                      printf("Backward \n"); 
+                  } 
+                  else if(sum_x==250&&sum_y==800&&sum_z==200) 
+                  { 
+                      printf("\nForward"); 
+                  } 
+                  else 
+                  { 
+                      printf("\nstop"); 
+                  } 
+}
