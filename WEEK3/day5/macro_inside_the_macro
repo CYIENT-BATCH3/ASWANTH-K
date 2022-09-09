@@ -1,0 +1,18 @@
+//program using macro inside macro
+1start
+2defining macro and macro inside another macro
+3.read input
+4.printning the output
+
+#include<stdio.h>
+#define pi 3.142//defining macro pi
+#define area(r) (pi*r*r)//defining pi inside area macro
+int main()
+{
+	
+	int ra;//declare radius
+	printf("enter a radius\n");
+	scanf("%d",&ra);//read radius
+	printf("area of circle is %f",area(ra));//printning the output
+
+	}
