@@ -1,0 +1,17 @@
+program using conditional compilation
+
+
+1start
+2 use conditional compilation
+
+#include<stdio.h>
+#define asw//define asw
+int main()
+{
+#ifdef aswa//checking if aswa is defined
+printf("it is defined");
+#endif//end
+#ifndef aswa//checking if aswa is not defined
+printf("please define the macro");
+#endif
+}
