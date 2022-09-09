@@ -1,0 +1,25 @@
+//WAP to illustrate the use of typedef
+1.start
+2.declaring structure
+3.changing structure name using typedef
+4.reading name
+5.printning name
+
+#include<stdio.h>
+struct student//defining structure
+{
+  int age;//defining variable
+  char name[20];//defining variable
+};//declaring structure variable
+typedef struct student ss;//renaming ss using typedef
+int main()
+{
+  
+   ss s1;  //declaring another structure variable
+   s1.age = 3;//initializing  age  with 3
+    printf("enter name");
+    scanf("%s",&s1.name);//reading num
+    printf("\nname is %s",s1.name);//printing name
+   printf("\nage of s1 is%d",s1.age);//printing age
+    
+}
