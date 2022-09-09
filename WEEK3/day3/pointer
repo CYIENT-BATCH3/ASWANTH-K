@@ -1,0 +1,18 @@
+//program usin pointer
+1.start
+2.declare pointers
+3.printning the results
+
+#include<stdio.h>
+int main()
+{
+    int a=3;//declaring variable
+    int *p1=&a;//declaring pointer
+    int **p2=&p1;//declaring double pointer
+    int ***p3=&p2;//declaring multiple pointer
+    printf("the value of a =%d",*p1);//printning the value of a
+    printf("\n address of a = %p",*p1);//printning the value of a
+    printf("\n address of p1 = %p",*p2);//printning the address of p1
+     printf("\n address of p2 = %p",*p3);//printning the address of p2
+    printf("\n address of p3 == %p",&p3);//printning the address  of p3
+}
