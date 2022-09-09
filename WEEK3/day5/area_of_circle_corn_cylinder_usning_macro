@@ -1,0 +1,22 @@
+//program for finding area  of circle,corn and cylinder
+1.start
+2.defining pi macro
+3.reading input
+4.finding the areas using equation
+
+#include <stdio.h>
+#include<math.h>//including math.h
+#define pi 3.14//defining pi macro
+int main()
+{
+    int rad,hei;//declaring rad
+    printf("enter the value for radius\n");
+    scanf("%d",&rad);//reading rad
+    printf("enter the value for height\n");
+    scanf("%d",&hei);//reading hei
+    printf("area of circle is %f",pi*rad*rad);//finding the of area of circle and printning the result
+    printf("\narea of corn %f",(pi * rad*(rad+sqrt((rad*rad)+(hei*hei)))));//finding the area of corn and printning the result
+    printf("\narea of cylinder %f",2*pi*rad*(hei+rad));//finding the  area of cylinder and printning the result
+
+    return 0;
+}
