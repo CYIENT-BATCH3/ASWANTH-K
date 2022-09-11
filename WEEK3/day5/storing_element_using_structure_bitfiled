@@ -1,0 +1,29 @@
+//program using structure bitfileds
+
+
+1.start
+2.defining strucure bitfields  and store elements
+#include<stdio.h>
+struct numbers//defining structure
+{
+    unsigned int num:3;//declaring structure bitfileds
+    unsigned int num2:3;//declaring structure bitfilelds
+    
+
+}num1;//declaring structure variable
+
+int main()
+{
+    int no,no1;//declaring variables
+    printf("enter a number between 0 and 7\n");
+    scanf("%d",&no);//reading variables
+        num1.num=no;//assigning no to num1
+printf("size of num 1 is%zu",sizeof(num1));
+printf("\nvalue= %d",num1.num);
+    printf("enter a number between 0 and 7\n");
+    scanf("%d",&no);//reading number no
+   if(no>0&&no<=7)
+        num1.num=no;//assigning no to num1
+printf("size of num 1 is %zu",sizeof(num1));//finding size of structure
+printf("\nvalue= %d",num1.num);
+}
