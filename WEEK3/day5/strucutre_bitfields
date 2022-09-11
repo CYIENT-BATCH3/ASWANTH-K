@@ -1,0 +1,22 @@
+//program using bitfields
+
+1.start
+2.define a structure using structure bitfields
+3.find size
+
+#include<stdio.h>
+struct student1//defining structure
+{
+    unsigned int high:1;//declaring 1 bit size
+    unsigned int low:1;//declaring 1 bit size
+}s1;
+struct student2//defining structure
+{
+    unsigned char high:1;//declaring 1 bit size
+    unsigned char low:1;//declaring 1 bit size
+}s2;
+int main()
+{
+printf("size of student 1 is%zu",sizeof(s1));//printning the size of s1
+printf("\nsize of student 2 is%zu",sizeof(s2));//printning the size of s2
+}
