@@ -1,0 +1,35 @@
+//program using passing a structure using pass by reference
+/*
+1.start
+2.declare a structure
+3.pass the structure using pass by reference
+4.access structure using pointer
+5.read and write data
+*/
+#include<stdio.h>
+struct employe//declaring structure
+{
+	int emp_id;
+    char name[20];
+    float salary;
+};
+void output(struct employe *ptr);//function prototype
+int main()
+{
+	setbuf(stdout,NULL);
+    struct employe record;//declaring structure variable
+	printf("enter emp_id");
+	scanf("%d",&record.emp_id);//reading input
+	printf("\nenter name of the employe\n");
+	scanf("%s",record.name);//reading input
+	printf("enter slary");//reading input
+    scanf("%f",&record.salary);
+
+    output(&record);//calling the output function using pass by reference
+}
+void output(struct employe *ptr)//defining the function
+{
+    printf("\nemp id is %d",ptr->emp_id);//printning the information
+    printf("\nname of the employe is %s",ptr->name);//printning the information
+    printf("\nsalary of the employe is %f",ptr->salary);//printning the information
+}
