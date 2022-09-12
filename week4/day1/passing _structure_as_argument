@@ -1,0 +1,30 @@
+//program using function passing structure as variable
+1.start
+2.declare structre
+3.read inputs
+4.call function passing structure as argument
+4.read and write datas
+
+
+struct student//declaring structure
+{
+    int st_age;//declaring int variable
+    char name[20];//declaring string name 
+};
+#include<stdio.h>
+void details(struct student record);//declaring function prototype
+int main()
+{
+    struct student record;//declaring structure  variable
+    printf("enter age\n");
+    scanf("%d",&record.st_age);//reading inputs
+    printf("\nenter name");
+    scanf("%s",record.name);//reading inputs
+    details(record);//calling the function
+}
+void details(struct student record)//defining function
+{
+    printf("\nage of the student is %d",record.st_age);//printning output
+    printf("\nname of the student is %s",record.name);//printning output
+    
+}
