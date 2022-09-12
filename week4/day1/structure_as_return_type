@@ -1,0 +1,24 @@
+//program for returning structure as return type
+
+1.start
+2.call a function using pass by value return strucutre as a return type
+#include <stdio.h>
+struct student output(struct student s);//function protype
+struct student//declaring structure
+{
+    int num;//declaring variable
+    
+};
+int main() {
+    struct student s,ptr;//declaring structure variables
+    s.num=16;//assigning variable
+    ptr=output(s);//calling output function by structure as an argument and  storing the return type in ptr structure variable
+    printf("%d",ptr.num);//printing result 
+    return 0;
+}
+struct student output(struct student b)//defining function
+{
+    b.num=12;//assigning 12 to num
+    return (b);//returning strucutre variable
+    
+}
