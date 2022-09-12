@@ -1,31 +1,58 @@
-using pass by reference method finding the sum and difference using difference functions
 
+//using pass by value method finding the sum and difference using difference functions
+
+/*
 1.start
 2.declaring structure
-3.finding the sum and difference by clling suma and diff functions  
+3.finding the sum and difference by calling sum and diff functions  
 
+*/
 #include <stdio.h>
 struct numbers//declaring structure
 {
     int num1;//declaring variable
     float num2;//declaring variable
+    float add,diff;//declaring float data type
+    
 };
-    void add(struct numbers *a);//functiontion prototype 
-    void dif(struct numbers *a);//functiontion prototype
+    struct numbers add(struct numbers a);//functiontion prototype 
+    struct numbers dif(struct numbers a);//functiontion prototype
     int main()
 {
     struct numbers n;//declaring structure variable
     printf("enter two numbers");
-    scanf("%d %f",&n.num1,&n.num2);//reading inputs
-    add(&n);//calling the function using pass by reference method
-    dif(&n);//calling the function using pass by reference method
+    scanf("%d %f",&n.num1,&n.num2);//reading  inputs
+    n=add(n);//calling the function using pass by value   method
+   n=dif(n);//calling the function using pass by value method
+    printf("\nsum of two numbers = %f",n.add);//finding sum of two variables
+    printf("\ndifference of two numbers = %f",n.diff);//finding difference of two variables
     return 0;
-}
-void add(struct numbers *a)//defining function
+    
+} 
+struct numbers add(struct numbers a)//defining function
 {
-    printf("\nsum of two numbers = %f",(a->num1)+(a->num2));//finding sum of two variables
+    a.add=a.num1+a.num2;//finding sum
+    return a;
+    
 }
-void dif(struct numbers *a)//defining function
+struct numbers dif(struct numbers a)//defining function
 {
-    printf("\ndifference of two numbers = %f",(a->num1)-(a->num2));//finding sum of two variables
+    a.diff=a.num1-a.num2;//finding difference
+    return a;
+    
+    
 }
+
+/*
+output
+
+enter two numbers
+5
+1
+
+sum of two numbers = 6.000000
+difference of two numbers = 4.000000
+
+
+*/
+    
