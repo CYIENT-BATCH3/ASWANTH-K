@@ -1,0 +1,31 @@
+using pass by reference method finding the sum and difference using difference functions
+
+1.start
+2.declaring structure
+3.finding the sum and difference by clling suma and diff functions  
+
+#include <stdio.h>
+struct numbers//declaring structure
+{
+    int num1;//declaring variable
+    float num2;//declaring variable
+};
+    void add(struct numbers *a);//functiontion prototype 
+    void dif(struct numbers *a);//functiontion prototype
+    int main()
+{
+    struct numbers n;//declaring structure variable
+    printf("enter two numbers");
+    scanf("%d %f",&n.num1,&n.num2);//reading inputs
+    add(&n);//calling the function using pass by reference method
+    dif(&n);//calling the function using pass by reference method
+    return 0;
+}
+void add(struct numbers *a)//defining function
+{
+    printf("\nsum of two numbers = %f",(a->num1)+(a->num2));//finding sum of two variables
+}
+void dif(struct numbers *a)//defining function
+{
+    printf("\ndifference of two numbers = %f",(a->num1)-(a->num2));//finding sum of two variables
+}
