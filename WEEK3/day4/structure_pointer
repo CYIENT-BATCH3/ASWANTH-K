@@ -1,0 +1,37 @@
+using structure pointer print the informations of library 
+
+1.start
+2.declare structure
+3.store structure in a pointer
+4.read the informations and print the informations using structure pointers
+
+#include<stdio.h>						
+struct library//declare a structure
+{    
+char book_name[10];
+    int id;
+};
+int main()
+{
+	
+    int i,n;//declaring variables
+    struct library book[20];//decalring array of structures
+    struct library *ptr;					//declare pointer ptr for struct variable
+    ptr=book;	//assign address of array of structure to pointer
+    printf("enter no.of books:\n");
+    scanf("%d",&n);		//reading no of books
+    for(i=1;i<=n;i++)						
+    {
+    printf("please enter book name:\n");
+    scanf("%s",(ptr+i)->book_name);//reading book name
+    printf("pleas enter id:");
+    scanf("%d",&(ptr+i)->id);//reading id
+    }
+    printf("\nnmber\tbook id\tbook name");
+    for(i=1;i<=n;i++)		//print the informations like book name and id 
+    {
+    printf("\n%d\t%d\t%s\n",i,(ptr+i)->id,(ptr+i)->book_name);
+
+    }
+
+}
