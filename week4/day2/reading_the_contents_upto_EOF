@@ -1,0 +1,31 @@
+//program for reading the contents of the file and printing the contents
+1.start
+2.open file
+3.print contents of the file 
+4.close the program
+
+
+#include<stdio.h>
+#include<stdlib.h>//including stdlib.h
+int main()
+{
+	setbuf(stdout,NULL);
+char ch;//declaring variable
+FILE *fp=fopen("C:\\Users\\ak70047\\Downloads\\file_lo.txt","r");//declaring file pointer and assigning a file to it 
+ch=fgetc(fp);//assigning character from file
+printf("%c",ch);//printning character
+if(fp==NULL)//checking the value of pointer
+{
+printf("file not found");
+exit(1);//terminating from the program if an error occurs
+}
+
+while(ch != EOF)//iterates upto EOF
+{
+	ch=fgetc(fp);//assigning character from file
+
+	printf("%c",ch);//printning character
+}
+fclose(fp);//closing the file 
+
+}
