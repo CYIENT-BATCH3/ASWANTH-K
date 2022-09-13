@@ -71,7 +71,7 @@ int main()
     TRISBbits.RB2=1;//setting RB2 as input
     TRISCbits.RC1=0;//setting RC1 as output
     TRISCbits.RC2=0;//setting RC2 as output
-    INTCON2=0X00;//desabling pullup resister
+    INTCON2=0X00;//enabling pullup resister
     PORTCbits.RC1=0;//setting RC1 as low
     PORTCbits.RC2=0;//setting RC2 as low
     while(1)
