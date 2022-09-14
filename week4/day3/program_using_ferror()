@@ -1,0 +1,20 @@
+//program using error handling in files
+
+1.start
+2.open a file and assign using file pointers
+3.check if there is any error occuring during the operation using ferror
+
+
+#include<stdio.h>
+int main()
+{
+FILE *fp=fopen("dld.txt","r");//open a file in read mode and assign using File pointers
+setbuf(stdout,NULL);
+char str[30]="it's error ";//declaring string
+	fprintf(fp,"%s","welldoneboy");//printning the contents in the file
+    if(ferror(fp))//check if error occured or not
+    {
+    	perror(str);//printning the error message
+    }
+    fclose(fp);//closing the file
+}
