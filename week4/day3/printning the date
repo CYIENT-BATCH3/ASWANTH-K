@@ -1,0 +1,25 @@
+//program for printing the date in perticula format using bitfields
+
+1.start
+2.declare structure and define bitfields
+3.printning the date
+
+
+
+#include<stdio.h>
+struct date//declaring structure and defining bitfileds for every elements
+{
+int mo:4;
+int date:5;
+int year;
+};
+int main()
+{
+	setbuf(stdout,NULL);
+struct date s={31,12,2014};//declaring structure variable and assigning values
+printf("enter the month date year");
+printf("date is %d/%d/%d",s.mo,s.date,s.year);//printning the date ,month and year
+}
+
+
+
