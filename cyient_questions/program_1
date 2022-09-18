@@ -1,0 +1,37 @@
+//WAP to convert Decimal number to it's corresponding binary number
+
+/*
+ * 1.start
+ * 2.reading number
+ * 3.pass the value to function
+ * 4.convert decimal to using bitwise operators  binary
+ * 
+ */
+
+
+
+#include<stdio.h>//including header file stdio.h
+void dec_to_bin(int v_num);//function prototype declaring
+int main()//main function defining 
+{
+	setbuf(stdout,NULL);//printning the output in the console
+int v_num;//declaring integer number
+printf("enter a number");
+scanf("%d",&v_num);//reading num from the user
+dec_to_bin(v_num);//calling the function by passing value
+}
+void dec_to_bin(int v_num)//defining the function
+{
+	printf("the binary value of the number is\n");
+	for(int i=31;i>=0;i--)//loop for taking 32 bits 
+	{
+		if(v_num&(1<<i))//check the bit is one or not
+		{
+		printf("1");//print 1 if it is 1
+		}
+		else
+			printf("0");//print 0 if it is 0
+
+
+	}
+}
