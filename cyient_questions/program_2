@@ -1,0 +1,139 @@
+//program for performing  bitwise opeartions at perticular position
+
+/*
+ * read number and position
+ * select perticular bitwise operations based on the input given
+ * call function for performing bitwise  opeartions
+ * inside function perform opearation the bit and return the value after clearing
+ * print the binary in main function using bitwise operator
+ */
+
+
+#include<stdio.h>//including header file
+int set_bit(int v_num,int v_pos);//declaring function prototype for setting function
+int tog_bit(int v_num,int v_pos);//declaring function prototype for toggling function
+int clr_bit(int v_num,int v_pos);//declaring function prototype for clearing function
+void testing(int num,int *LED_ON,int *LED_OFF );//declaring function prototype for testing function
+int extract(int num,int pos);//declaring function prototype for extract function
+int main()//defining main function
+{
+	setbuf(stdout,NULL);//printning the output in console
+int v_num,v_pos,operation;//decalring variables
+static int LED_ON=0,LED_OFF=0;//declaring static variables
+printf("PLEASE  enter the operation \n1.setting bit\n 2.clearing bit \n3.Toggling a bit\n4.Testing a bit\n5.Extracting a bit\n6.Monitoring a bit\n");
+scanf("%d",&operation);//reading input for selecting perticular operations
+switch(operation)
+  {
+     case 1:		                printf("enter a number\n");
+					scanf("%d",&v_num);//read number
+					printf("enter the position\n");
+					scanf("%d",&v_pos);//reading position of the bit to set
+					int ret_set=set_bit(v_num,v_pos);//calling set function
+					printf("the binary value of the number after setting the bit at %d th position\n",v_pos);
+						for(int i=7;i>=0;i--)//loop for taking 7 bits
+						{
+							if(ret_set&(1<<i))//check the bit is one or not
+							{
+							printf("1");//print 1 if it is 1
+							}
+							else
+								printf("0");//print 0 if it is 0
+						};break;
+     case 2:		                printf("enter a number\n");
+    					scanf("%d",&v_num);//read number
+    					printf("enter the position\n");
+    					scanf("%d",&v_pos);//reading position of the bit to clear
+    					int ret_clr=clr_bit(v_num,v_pos);//calling clear  function
+    					printf("the binary value of the number after setting the bit at %d th position\n",v_pos);
+    						for(int i=7;i>=0;i--)//loop for taking 7 bits
+    						{
+    							if(ret_clr&(1<<i))//check the bit is one or not
+    							{
+    							printf("1");//print 1 if it is 1
+    							}
+    							else
+    								printf("0");//print 0 if it is 0
+    						};break;
+
+     case 3:		                printf("enter a number\n");
+        		       	        scanf("%d",&v_num);//read number
+        				printf("enter the position\n");
+        				scanf("%d",&v_pos);//reading position of the bit to toggle
+        				int ret_tog=tog_bit(v_num,v_pos);//calling toggle function
+        				printf("the binary value of the number after setting the bit at %d th position\n",v_pos);
+        				for(int i=7;i>=0;i--)//loop for taking 7 bits
+        						{
+        							if(ret_tog&(1<<i))//check the bit is one or not
+        							{
+        							printf("1");//print 1 if it is 1
+        							}
+        							else
+        								printf("0");//print 0 if it is 0
+        					    };break;
+     case 4:		        printf("enter a number\n");
+             		        scanf("%d",&v_num);//read number
+             			testing(v_num,&LED_ON,&LED_OFF);
+             			printf("\n%d LED lights on and %d LED lights off",LED_ON,LED_OFF);break;
+
+     case 5:                    printf("enter a number\n");
+    	                        scanf("%d",&v_num);//read number
+		                printf("enter the position\n");
+		                scanf("%d",&v_pos);//reading position of the bit to extract
+		                int ret_ext=extract(v_num,v_pos);//calling extract function
+		                printf(" the bit at %d position is %d",v_pos,ret_ext);
+     case 6:            for(int j=0;j<=10;j++)//incrementning number from 0 t0 10
+                           {
+    	                     printf("\nstatus bit of %d is",j);
+
+    	                       if(j&1)//checking the bit at 0th position
+    	                       {
+    	                    	   printf(" 1");//print 1 if it is 1
+
+    	                       }
+    	                       else
+    	                    	   printf("0");//print 0
+
+                           }
+  }//end of switch
+
+}
+
+
+int set_bit(int v_num,int v_pos)//defining the function
+{
+   return (v_num|1<<v_pos);	//performing setting of pos bit of num
+}
+
+int clr_bit(int v_num,int v_pos)//defining the function
+{
+   return (v_num&(~(1<<v_pos)));	//performing clearing of pos bit of num
+}
+
+int tog_bit(int v_num,int v_pos)//defining the function
+{
+   return (v_num^(1<<v_pos));	//performing toggling of pos bit of num
+}
+
+void testing(int num,int *LED_ON,int *LED_OFF )//calling testing function
+{
+	for(int i=7;i>=0;i--)//loop for taking 7 bits
+	   {
+
+	if(num&(1<<i))//check the bit is one or not
+	  {
+	     (*LED_ON)++;//increment LED_ON if it is 1
+	  }
+	 else
+	   (*LED_OFF)++;//increment LED_OFF  if it is 0
+	   }
+}
+int extract(int num,int pos)
+{
+    if(num &1<<pos)//checking if the bit at pos is 0 or 1
+    {
+      return 1;//return 1 if it is 1
+    }
+    else
+
+     return 0;//return 0 if it is 0
+}
