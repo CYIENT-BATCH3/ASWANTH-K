@@ -1,0 +1,18 @@
+//WA C++ program to find factorial of number
+
+
+#include<iostream>//including header file
+using namespace std;//including std library
+int main()
+{
+	int num,fact=1;//declaring variable
+
+	cout<<"enter the number"<<endl;
+    cin>>num;//reading input
+    cout<<"factorialof  numbers is ";
+    for(int i=1;i<=num;i++)
+    {
+    	fact=fact*i;//finding factorial
+    }
+    cout<<fact;//printning the output
+}
