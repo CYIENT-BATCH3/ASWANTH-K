@@ -1,0 +1,18 @@
+#include<iostream>//including header file
+using namespace std;//including std library
+int main()
+{
+	int a,b;
+	setbuf(stdout,NULL);// printning the output in console
+	cout<<"enter two number"<<endl;
+    cin>>a>>b;//reading input
+    if(a>b)
+    {
+    cout<<"a is bigger"<<a;//printing output
+    }
+    else
+    cout<<"b is bigger"<<b;//printing th output
+
+
+}
+
