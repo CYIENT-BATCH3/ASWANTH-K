@@ -1,0 +1,25 @@
+//WAP to find sum of 4 digit number and print the result
+
+
+#include<iostream>//including header file
+using namespace std;//including std library
+int main()
+{
+	int num,sum=0,dig;//declaring variable
+
+	cout<<"enter the number"<<endl;
+    cin>>num;//reading input
+    if(num>1000&&num<9999)//checking if the number is 4 digit
+    {
+    while(num>0)
+    {
+     dig=num%10;//taking last digit
+    sum=sum+dig;//finding sum
+    num=num/10;//deviding with 10
+
+    }
+    cout<<"sum of the digit is "<<sum;//printning the output
+    }
+    else
+    	cout<<"please enter the 4 digit number";
+}
