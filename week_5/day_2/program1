@@ -1,0 +1,20 @@
+//program using oop
+
+#include<iostream>
+using namespace std;
+class my_std//declaring class
+{
+public://public access specifier
+	int x;//declaring data member
+private://private access specifier
+	int y;//declaring data member
+};
+int main()
+{
+my_std mu;//declaring object
+mu.x=44;//accessing variable
+cout<<mu.x<<endl;
+//mu.y=4;//can't access y is private variable
+//cout<<mu.y<<endl;
+
+}
