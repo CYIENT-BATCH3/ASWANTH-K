@@ -1,0 +1,40 @@
+
+
+
+
+//program using copy  conctructors in oops
+
+
+	#include<iostream>
+	using namespace std;
+	class constructor//creating class
+	{
+		int id;//declaring variable
+		int age;//declaring variable
+	public:
+		constructor(int hh,int a)//constructor function
+		{
+			id=hh;//initialising data
+		age=a;
+		}
+		constructor(const constructor &obj)//copy constructor function defining
+				{
+					id=obj.id;//initialising data from previous object
+				age=obj.age;//initialising data from previous object
+				}
+		void display()
+		{
+			cout<<"id :"<<id<<endl;
+			cout<<"age :"<<age<<endl;
+		}
+
+	};
+
+
+	int main()
+	{
+		constructor obj(88,99);//creating object using  parameterised constructor
+		obj.display();//calling function
+		constructor obj2(obj);//creating objecect using copy constructor
+		obj2.display();//calling function
+	}
