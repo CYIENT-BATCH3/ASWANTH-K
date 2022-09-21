@@ -1,0 +1,37 @@
+//program using array in oops
+
+
+	#include<iostream>
+	using namespace std;
+	class employe//declaring class
+	{
+
+	char name[15];
+	float salary;
+
+	public
+	 void read();
+	 void display();
+	};
+	void employe::read()//defining the function outside the class
+	{
+		cout<<"read the name"<<endl;
+		cin>>name;
+		cout<<"enter the salary"<<endl;
+	   cin>>salary;
+	}
+	void employe:: display()/defining the function outside the class
+	{
+		cout<<"employe name name is"<<name<<endl;
+		cout<<"salary is"<<salary<<endl;
+	}
+
+int main()
+{
+		employe e1;//creating object
+		e1.read();//calling function
+		e1.display();//calling function
+
+
+}
+
