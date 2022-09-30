@@ -67,8 +67,8 @@ void can_init()       //defining  can_init function
 {
     TRISCbits.RC0=0;   //output for occupant status
     TRISCbits.RC1=0;   //output for occupant status
-    TRISDbits.RD0=0;
-    TRISDbits.RD5=0;
+    TRISDbits.RD0=0;    //output for buzzer(seat belt)
+    TRISDbits.RD5=0;    //output for airbag
     PORTDbits.RD0=0;
     PORTDbits.RD5=0;
     PORTC=0x00;          //setting PORTC as 0x00
@@ -178,7 +178,7 @@ char occup_stastus_function(char switch_1,char switch_2) //declaring occup_stast
         {
              
             RC0=1;   //assigning RC0 to 1
-             RC1=0;
+             RC1=0;   //assigning 0 to RC1
             
             __delay_ms(200);
             RC0=0;    //assigning RC0 to  0
@@ -219,12 +219,12 @@ char air_bag_function(char occupant_status,char seat_belt_status)//defining air_
     if((occupant_status>0x01&&occupant_status<0x04)&&( seat_belt_status==0x01))//checking if the passenger is small adult or adult and if the passenger bucked the seat belt
     {
        air_bag_status=0x01;//enabling air bag if the passenger if the condition is true
-       RD5=0;
+       RD5=0; //turning off airbag led if airbag enabled
        
     }
     else
     {
-        RD5=1;
+        RD5=1;  //turning on airbag led if airbag desabled
     air_bag_status=0x00;//disable  air bag if the condition is false
     }
         
@@ -265,13 +265,13 @@ int main()    //defining main function
         seat_belt_status = seat_belt_function();//calling seat_belt_status _function and result is stored in  seat_belt_status
         air_bag_status=air_bag_function(occupant_status,seat_belt_status);//calling air_bag _function and result is stored in  air_bag_status
         warning_lamp_status=warning_lamp_function(air_bag_status,occupant_status);//calling warning_lamp_function and result is stored in warning_lamp_status
-        if((occupant_status >0x00)&&(seat_belt_status!=0x01))
+        if((occupant_status >0x00)&&(seat_belt_status!=0x01))//checking condition for warning of seat belt
         {
-            RD0=1;
+            RD0=1;//enable warning buzzer
         }
         else
         {
-            RD0=0;
+            RD0=0;//disable warning buzzer
             
         }
         
